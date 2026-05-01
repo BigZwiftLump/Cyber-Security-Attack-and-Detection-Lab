@@ -49,10 +49,11 @@ This lab is built to support:
 - **pfSense** (Firewall & packet logging)  
 - **Kali Linux** (Offensive tooling)  
 - **Windows Server** (Target host)  
+- **Oracle VirtualBox** (VM and NAT Network)
 
 ---
 
-## 📈 Future Enhancements
+## 📈 Planned Future Enhancements
 
 - MITRE ATT&CK‑mapped detection rules  
 - Automated attack chains (Atomic Red Team / Caldera)  
