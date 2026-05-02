@@ -26,7 +26,6 @@
 +-----------------------------------------------------------------------+
 
 '''mermaid
-flowchart TD
 
     %% WAN Side
     subgraph WAN["CyberLab NAT Network (WAN)"]
