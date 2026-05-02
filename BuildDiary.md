@@ -45,7 +45,7 @@ pfSense LAN (10.0.0.1)
 Windows Server (10.0.0.20)
 
 
-- So today, in order to facilitate this, I will need to create a new **host-only internal network** in VirtualBox and assign my Windows Server and Wazuh Server new static IP addresses on the newly created internal LAN  
-
----
+- Finalised the dual‑NIC Wazuh design, confirming NIC1 on the LAN for log ingestion and NIC2 on a Host‑Only network for safe management access.
+- Reworked the ASCII network diagram, correcting alignment, removing duplicate Wazuh boxes, and clearly showing the dual‑NIC architecture.
+- Validated the security model, confirming that Host‑Only networking keeps the lab isolated and does not expose the real machine or home LAN.
 
