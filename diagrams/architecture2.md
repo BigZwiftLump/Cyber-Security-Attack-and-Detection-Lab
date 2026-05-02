@@ -1,4 +1,5 @@
 ```mermaid
+flowchart TD
 
     %% WAN Side
     subgraph WAN["CyberLab NAT Network (WAN)"]
@@ -21,3 +22,5 @@
     %% Alerting Flow
     WIN -->|Logs & Alerts| WAZUH
     PFLAN -->|Firewall Alerts| WAZUH
+```
+
