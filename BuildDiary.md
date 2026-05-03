@@ -49,3 +49,9 @@ Windows Server (10.0.0.20)
 - Reworked the ASCII network diagram, correcting alignment, removing duplicate Wazuh boxes, and clearly showing the dual‑NIC architecture.
 - Validated the security model, confirming that Host‑Only networking keeps the lab isolated and does not expose the real machine or home LAN.
 
+---
+
+## Day 4
+
+- Tweaked the git README file to reflect the changes made to the lab architecture
+
