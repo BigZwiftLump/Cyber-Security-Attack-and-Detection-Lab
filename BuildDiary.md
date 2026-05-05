@@ -101,7 +101,37 @@ Windows Server (10.0.0.20)
 - Took a VirtualBox snapshot (“DC – Fresh Build + Baseline”) to preserve this clean state before expanding the lab
 - Downloaded and installed Sysmon via command line and applied the sysmonconfig config settings from a xml file (from SwiftOnSecurity Github)
 - Activated Module and Script Block Logging (Id 4103 and 4104 respectively)
-- Tested to ensure that events were being captured under both Id's 
+- Tested to ensure that events were being captured under both Id's
+
+## Day 6
+
+### **Advanced Audit Policy + Sysmon Verification (Windows Server Core)**
+
+- Enabled Advanced Audit Policy on the Windows Server Core Domain Controller using `auditpol`  
+  - Configured required subcategories for **Logon/Logoff**, **Account Logon**, **Account Management**, and **Detailed Tracking**  
+  - Added **Other Account Logon Events** to capture Kerberos and NTLM authentication activity  
+
+- Verified audit policy configuration  
+  - Ran `auditpol /get /category:*` to confirm Success/Failure auditing was enabled for all required subcategories  
+  - Confirmed the server was generating key security events (4624, 4625, 4688, 4720–4738, 4768–4771)
+
+- Confirmed Sysmon installation and operation  
+  - Checked service status with `Get-Service Sysmon64`  
+  - Verified active Sysmon configuration using `sysmon64.exe -c`  
+  - Confirmed Sysmon Operational log was producing expected event IDs (1, 3, 11, 22, etc.)
+
+- Validated logs on Server Core (no GUI available)  
+  - Used `Get-WinEvent` to inspect **Security** and **Sysmon** logs directly from the command line  
+  - Confirmed both logs were returning fresh, relevant events
+
+- Generated test events to confirm end‑to‑end visibility  
+  - Triggered logon/logoff events  
+  - Created and deleted a test user to generate account management events  
+  - Executed simple processes (e.g., `whoami`, `notepad.exe`) to validate 4688 and Sysmon Event ID 1  
+  - Verified all expected events appeared in the Security and Sysmon logs
+
+
+	
 
 
 
