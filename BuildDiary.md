@@ -129,6 +129,13 @@ Windows Server (10.0.0.20)
   - Created and deleted a test user to generate account management events  
   - Executed simple processes (e.g., `whoami`, `notepad.exe`) to validate 4688 and Sysmon Event ID 1  
   - Verified all expected events appeared in the Security and Sysmon logs
+  
+  ## Day 7
+  
+ - Tried logging in to WAZUH dashbaord on host machine and server wasn't running
+	- Some lenghty investigation before work revealed a failed WAZUH install on the Ubuntu machine
+	- Updated the WAZUH from the command line and fixed the failed installs
+	- Was able to log in to WAZUH dashboard from the host machine
 
 
 	
