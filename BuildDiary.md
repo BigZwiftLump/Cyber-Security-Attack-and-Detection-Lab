@@ -136,6 +136,13 @@ Windows Server (10.0.0.20)
 	- Some lenghty investigation before work revealed a failed WAZUH install on the Ubuntu machine
 	- Updated the WAZUH from the command line and fixed the failed installs
 	- Was able to log in to WAZUH dashboard from the host machine
+	
+ ## Day 8
+ 
+ - Have had recurrent issues with the Ubuntu/wazuh VM dropping network configurations
+	- I have got to the stage where I can log in to the wazuh dashboard from my host machine, only for that to fail the next Day
+	- Have decided to recreate the wazuh VM using a Linux Ubuntu Server
+	- Started server spin up and config
 
 
 	
